@@ -8,6 +8,8 @@ spring:
 
 app:
   api-prefix: /api/v1
+  url:
+    auth: "http://localhost:8080/auth"
 
 server:
   port: 8888
