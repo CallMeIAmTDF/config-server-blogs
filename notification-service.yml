@@ -21,7 +21,7 @@ mailServer:
   host: "{cipher}7d16c815d652f8716ee13e85f4557005c6277682698936dd7ed222fc519eafa5"
   port: 587
   email: "{cipher}4f710b9b7bba62b32172db91c28131c092f89ecbdf86d39e19548cc0f149655e6b3f644111a997f84c220b90a783be57"
-  password: "{cipher}5aea245dab2642334cba6b6c741133cdb7fabd8b33bc64802cfec539907f1fdf76b3edbf898e36d9d026bfe44d363c3e"
+  password: "{cipher}33b37c49e7cf9886d5b58c5f48bd3cf96650e0833147901ef97502afe009a1faa5208a6941ec1a48d27b65bf1ab19fcd"
   protocol: smtp
   isSSL: false
 
