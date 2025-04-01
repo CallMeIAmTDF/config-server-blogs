@@ -1,0 +1,39 @@
+server:
+  port: 8130
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9094
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+# Mail
+brevo:
+  api-key: "{cipher}b212cc9cd6d1c359a3586aca1231ef8e0e334b8fdde848d63f0c8378f0fb7c52aef05245bdc43a8142718f01127cb9141165cc7f066e8544799c04804b7c92bf98eebb7883f1f0233eed581af1d72798f067f0db2ee8ffb8ece50f718453994daa662cd4d5bde07ba241e42637591d4f"
+
+# Mail
+mailServer:
+  host: "{cipher}7d16c815d652f8716ee13e85f4557005c6277682698936dd7ed222fc519eafa5"
+  port: 587
+  email: "{cipher}4f710b9b7bba62b32172db91c28131c092f89ecbdf86d39e19548cc0f149655e6b3f644111a997f84c220b90a783be57"
+  password: "{cipher}5aea245dab2642334cba6b6c741133cdb7fabd8b33bc64802cfec539907f1fdf76b3edbf898e36d9d026bfe44d363c3e"
+  protocol: smtp
+  isSSL: false
+
+api:
+  verify-register: "http://localhost:3000/verify/register?code="
+  verify-forgot-password: "http://localhost:3000/users/password/edit?code="
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
