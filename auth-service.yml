@@ -20,6 +20,36 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
+redis:
+  host: localhost
+  port: 6379
+
+auth:
+  outbound:
+    identity:
+      client-id: "{cipher}b791a27f0ef1ad38ba6c36751ac4b4fffd5cb43a24f43940b9e040a2164ab42218ef515b2a1f80b01b702c1f41cc87e140bbebdde43acee87a98991acde66e30172ccfb4ca1a9ee023d314e68593459625b54808b7e3deb6e6b600e8d94f9c58"
+      client-secret: "{cipher}49bb55315e2092adc94ce0677f6ffc6389f342ebf0a2eda77fda70df30223debe75d6a7382fde0799f99c6989d5c94fefb345a96b09d00ceb205dbd1d315a871"
+      redirect-uri: "http://localhost:3000/authenticate"
+  jwt:
+    accessSignerKey: "{cipher}6e32100528bf2d26d50ffc110e0845a7a0dcad174172586df4a853e9022ea2a05497d50b5820f3c7700935bcb27261afaa213f279fb119e13c5c2fced00c0d4ef4f4343f43273bf4392f36a5f6d85ec8f6a0b64eeeac92356c08dd1409f8816d"
+    refreshSignerKey: "{cipher}b6228ae6b647095f418d27d195a5d9f39a801bc48f1eff90dda77090b36b33ce461a3c3aa4ab3b6b3321746f85881df6e11e32dd5f4ca99146877b2e46f63c96cada0745989fd0b6ef09700d63c9a8c2e3b79ddf0cb69267e05a79b1b03764ec"
+#    valid-duration: 10 # in second
+#    refreshable-duration: 100 # in seconds
+    valid-duration: 86400 # 1 day (second)
+    refreshable-duration: 2592000 # 30 day (second)
+  verify:
+    register-code-duration: 86400000 # 24 * 60 * 60 * 1000 = 86400000 milli  --- 1 day
+    forgot-password-code-duration: 86400000 # 24 * 60 * 60 * 1000 = 86400000 milli  --- 1 day
 
 info:
   app:
