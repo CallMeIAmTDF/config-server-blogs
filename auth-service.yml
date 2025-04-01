@@ -1,1 +1,8 @@
-d
+server:
+  port: 8080
+
+info:
+  app:
+    name: "auth-service"
+    description: "JobHunter Auth Application"
+    version: "1.0"
