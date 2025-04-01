@@ -15,8 +15,6 @@ spring:
   sql:
     init:
       mode: always
-  config:
-    import: "optional:configserver:http://localhost:8071/"
   kafka:
     bootstrap-servers: localhost:9094
     producer:
