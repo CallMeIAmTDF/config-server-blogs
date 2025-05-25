@@ -28,7 +28,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:8070/eureka/
+      defaultZone: http://47.129.55.176:8070/eureka/
 
 redis:
   host: localhost
