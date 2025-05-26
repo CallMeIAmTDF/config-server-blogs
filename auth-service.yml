@@ -5,7 +5,7 @@ spring:
   # profiles:
   #  active: native
   datasource:
-    url: jdbc:mysql://localhost:3306/authdb
+    url: jdbc:mysql://authdb:3306/authdb
     username: "{cipher}c8fb983068048206ccd0170aeafa620d2eda867aad4e2971e68be66abe12dd39"
     password: "{cipher}c8fb983068048206ccd0170aeafa620d2eda867aad4e2971e68be66abe12dd39"
   jpa:
