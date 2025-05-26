@@ -31,7 +31,7 @@ eureka:
       defaultZone: http://47.129.55.176:8070/eureka/
 
 redis:
-  host: localhost
+  host: redis-stack
   port: 6379
 
 auth:
